@@ -1,0 +1,158 @@
+body {
+    background-color: #f9f9f9;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Lato', sans-serif;
+    color: #353535;
+}
+
+.menu-nav {
+    width: 100%;
+    height: auto;
+}
+
+.menu-nav a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #353535;
+}
+
+.menu-nav a:hover { color: #ff6555;}
+a:visited { color:#353535;}
+
+.menu-nav ul li{
+    list-style: none;
+    font-weight: bolder;
+    font-size: 15px;    
+}
+
+.formulario input {
+    width: 50%;
+    height: 50px;
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+
+.formulario button {
+    width: 10%;
+    height: 55px;
+    color: white;
+    background: linear-gradient(#ff6555, #f95346);
+    border: #fff;
+    border-radius: 3px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 900;   
+}
+
+.encabezado img {
+    width: 100%;
+}
+
+.introduccion h4 {
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 1px;
+    font-size: 20px;    
+}
+
+.introduccion p {
+    font-size: 13px;    
+}
+
+.contenido_principal section h2 {
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    word-spacing: 5px;
+    font-size: 30px;
+}
+
+.contenido_principal section > p {
+    color:#565656;
+    font-weight: 400;    
+}
+
+.contenido_principal article p {
+    color:#565656;
+    font-size: 13px;
+}
+
+.contenido_principal article h4 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 900;
+}
+
+.precios article {
+    width: 20%;
+    height: auto;
+    box-shadow: 2px 2px 5px 2px #919191;
+    border-radius: 7px;
+    margin-left: 10px;
+}
+
+.precios article h4 {
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.precios article h2 {
+    font-size: 40px;
+}
+
+.precios table {
+    width: 40%;
+}
+
+.precios button {
+    height: 30px;
+    color: white;
+    background-color: #f95346;
+    border: none;
+    border-radius: 3px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.footer {
+    background-color: #e25a50;
+    width: 100%;
+    height: 200px;
+}
+
+.footer a{
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.footer a:hover {color: firebrick;}
+
+.footer p {
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+.menu-footer {
+    background-color: #353535;
+    width: 100%;
+    height: 100px;
+}
+
+.menu-footer p {
+    color: #d6d6d6;   
+}
+
+.menu-footer ul li a {
+    list-style: none;
+    color: #d6d6d6;
+    text-decoration: none;
+}
+
+.menu-footer a:hover {
+    color:#e25a50;
+}
