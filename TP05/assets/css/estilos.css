@@ -331,9 +331,9 @@ width: 100%;
 /*animacion*/
 
 .iconos {
-transition: 1.3s ease-in-out; 
+    transition: 1.3s ease-in-out; 
 }
 
 .iconos:hover{
-transform: scale(1.35)
+    transform: scale(1.35)
 }
