@@ -1,0 +1,507 @@
+$fondo: #f9f9f9
+$coral-1: #e25a50
+$coral-2: #ff6555
+$coral-3: #f95346
+$dark-gray: #353535
+$medium-gray: #919191
+$light-gray: #d6d6d6
+$white: #fff
+$lato-font: Lato
+$sans: sans-serif
+
+@mixin border-radius($radius)
+    border-radius: $radius
+    -moz-border-radius: $radius
+    -webkit-border-radius: $radius
+    -o-border-radius: $radius
+    
+@mixin font-style($font-size, $letter-spacing, $text-transform: none, $font-weight: 400)
+    font-size: $font-size
+    letter-spacing: $letter-spacing
+    text-transform: $text-transform
+    font-weight: $font-weight
+    
+@mixin size($width, $height)
+    width: $width
+    height: $height
+    
+@mixin footer
+    font-size: 12.5px
+    letter-spacing: 1px
+    width: auto
+    
+@mixin articles-iphone
+    width: 100%
+    margin-top: 40px
+    display: flex
+    
+@mixin articles-iphone-media
+    display: flex
+    flex-direction: column
+    justify-content: center
+    text-align: center
+    width: 90%
+    margin-bottom: 35px
+    
+/*------------------------*/
+
+body
+    background-color: $fondo
+    margin: 0px
+    padding: 0px
+    font-family: $lato-font, $sans
+    color: $dark-gray
+a
+    text-decoration: none
+    color: $dark-gray
+    &:hover
+        color: $coral-2
+    &:visited
+        color: $dark-gray
+
+.menu-nav
+    @include size(100%, 90px)
+    display: flex
+    justify-content: space-between
+    align-items: center
+        
+    img 
+        @include size(120px, 30px)
+        margin-left: 30px
+        
+    a
+        text-transform: uppercase
+        
+    ul  
+        li 
+            @include font-style(12px, 3px, none, 900)
+            list-style: none
+            @include size(100px, auto)
+            display: inline-block
+
+.formulario 
+    @include size(100%, 80px)
+    margin-top: -40px
+    display: flex
+    justify-content: center
+        
+    input 
+        @include font-style(18px, 1px)
+        @include size(50%, 70px)
+        padding-left: 20px
+        
+    button
+        @include font-style(11px, 2px, uppercase, 900)
+        @include size(10%, 76px)
+        color: white
+        background: linear-gradient($coral-2, $coral-3)
+        border: none
+        @include border-radius(3px)
+  
+.encabezado 
+    img 
+        @include size(100%, auto)
+
+.introduccion
+    @include size(85%, 230px)
+    margin: 50px auto 0px auto
+    display: flex
+    justify-content: space-around
+    
+    h4 
+        @include font-style(23px, 2px, uppercase, 900)
+        text-align: center
+    p
+        font-size: 14px
+        text-align: center
+        margin-top: -20px
+    img
+        width: 90px
+        margin: auto
+        display: block
+
+.item-intro
+    @include size(300px, 220px)
+
+.contenido_principal
+    width: 90%
+    margin: auto
+    display: flex
+    flex-direction: row
+        
+    p
+        margin-top: -10px
+        width: 100%
+        
+    article
+        p
+            color: #565656
+            font-size: 15px
+        h4
+            @include font-style(18px, 2px, uppercase, 900)
+
+.intro-secc
+    text-align: center
+        
+    h2
+        margin-top: 40px
+        @include font-style(50px, 0px, lowercase, 700)
+    p
+        font-size: 20px
+        margin: -40px 0 50px 0
+
+.izq-iphone
+    text-align: right
+    width: 35%
+        
+    article 
+        @include articles-iphone
+        flex-direction: row-reverse
+
+.img-centro
+    width: 300px
+    margin: auto
+
+.derecha-iphone 
+    text-align: left
+    width: 35%
+        
+    article
+        @include articles-iphone
+        flex-direction: row
+
+.icono-iphone/*(1.3)contenedor hijo icono*/
+    @include size(50px, 50px)
+    margin: 20px
+
+.intro-precios
+    @include size(100%, 350px)
+    text-align: center
+    background-image: url(/TP06/assets/img/banner02.jpg)
+    display: flex
+    flex-direction: column
+    justify-content: center
+    margin-top: -80px
+        
+    h2
+        @include font-style(50px, 0px, lowercase, 700)
+        margin-top: 40px
+        
+    p
+        font-size: 20px
+        margin-top: -40px
+ 
+.precios/*contenedor padre cajas precios*/
+    width: 85%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin: auto
+        
+    article
+        @include size(20%, auto)
+        box-shadow: 0px 2px 5px 2px $light-gray
+        @include border-radius(7px)
+        margin: -60px 0 0 10px
+        text-align: center
+        background-color: $white
+            
+        h4
+            @include font-style(13px, 1px, uppercase, 400)
+            margin-top: 45px
+            color: $medium-gray
+        h2 
+            font-size: 40px
+            margin-top: -5px 
+     
+    table
+        width: 50%
+        margin: -15px auto 20px auto
+        color: $medium-gray
+     
+    button
+        @include size(100px, 30px)
+        color: $white
+        background-color: $coral-3
+        @include border-radius(4px)
+        border: none
+        text-align: center
+        display: block
+        @include font-style(11px, 3px, uppercase, 900)
+        margin: 0px auto 30px auto
+        
+.footer
+    background-color: $coral-1
+    @include size(100%, 250px)
+    margin-top: 60px
+    display: flex
+    justify-content: center
+    align-items: center
+        
+    a
+        font-weight: 900
+        &:hover
+            color: firebrick
+    p
+        @include font-style(30px, 2px)
+        text-align: center
+        color: $white
+
+.menu-footer
+    background-color: $dark-gray
+    @include size(100%, 100px)
+    margin-top: -17px
+    display: flex
+    justify-content: space-around
+    align-items: center
+        
+    p
+        color: $light-gray
+        @include font-style(13px, 2px)
+        width: 20%
+        margin-left: -60px
+    ul
+        margin-right: -60px
+        
+        li
+            display: inline-block
+            width: 70px
+            list-style: none
+            @include font-style(13px, 2px)
+                
+            a
+                color: $light-gray
+
+.iconos
+    transition: 1.3s ease-in-out
+    &:hover
+        transform: scale(1.35)
+    
+@media screen and (max-width: 768px)/*mediaqueries tablet*/
+    .menu-nav
+        height: 65px
+        
+        img
+            @include size(90px, 23px)
+            
+        ul
+            li
+                font-size: 12px
+    
+    .formulario
+        input
+            @include size(60%, 40px)
+            font-size: 12px
+            padding-left: 10px
+            margin-top: 12px
+            
+        button 
+            @include size(14%, 45px)
+            margin-top: 12px
+ 
+    .introduccion
+        display: flex
+        flex-wrap: wrap
+        margin-top: -5px
+            
+        img 
+            width: 80px
+            
+        h4 
+            font-size: 15px
+            margin-top: 10px
+            
+        p 
+            font-size: 15px
+ 
+    .item-intro
+        @include size(50%, 76%)
+    
+    .intro-secc 
+        margin-top: 130px
+            
+        h2 
+            font-size: 35px
+            margin-bottom: 40px
+        p 
+            font-size: 17px
+    
+    .img-centro 
+        width: 200px
+        margin: -2px auto 0 auto
+            
+        img 
+            width: 100%
+            margin: auto
+ 
+    .icono-iphone 
+        @include size(40px, 40px)
+  
+    .contenido_principal 
+        height: 415px
+        margin-top: -20px
+            
+        article 
+            margin-top: 5px
+                
+            h4 
+                @include font-style(15px, 0.5px, uppercase, 900)
+            p 
+                font-size: 14px
+  
+    .intro-precios 
+        margin-top: 0
+        @include size(100%, 200px)
+            
+        h2 
+            font-size: 35px
+            margin: -10px 0 35px 0
+            
+        p 
+            font-size: 18px
+    
+    .precios 
+        margin-top: -65px
+        @include size(70%, auto)
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-around
+            
+        article 
+            width: 200px
+            margin: 20px auto 0 auto
+    
+    .footer 
+        height: 140px
+        margin-top: 30px
+            
+        p 
+            font-size: 20px
+            width: 70%
+    
+    .menu-footer 
+        margin-top: 0px
+        height: 65px
+            
+        p 
+            margin-left: 30px
+            
+        ul 
+            margin-right: 20px
+            
+@media screen and (max-width: 420px)/*Mediaqueries móvil*/
+    .menu-nav
+        height: 50px
+            
+        img 
+            @include size(80px, 20px)
+ 
+    .encabezado
+        height: 250px
+            
+        img 
+            @include size(auto, 230px)
+    
+    .formulario
+        input
+            @include font-style(12px, 0.7px)
+            margin-top: -6px
+            height: 50px
+            
+        button 
+            @include size(18%, 56px)
+            @include font-style(11px, 1px, uppercase, 700)
+            margin-top: -6px
+
+    .introduccion
+        display: flex
+        flex-direction: column
+        justify-content: center
+        @include size(90%, auto)
+        margin-top: -5px
+            
+        h4 
+            margin: 12px 0 25px 0
+    
+    .item-intro 
+        margin: 15px auto 0 auto
+    
+    .intro-secc 
+        margin-top: 0px
+    
+    .contenido_principal  
+        margin-top: 0px
+        @include size(90%, auto)
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-around
+            
+        article 
+            p 
+                font-size: 15px
+                width: 70%
+                margin: -10px auto 0 auto
+        
+    .img-centro 
+        display: none
+
+    .izq-iphone, .derecha-iphone 
+        width: 50%
+
+    .izq-iphone
+        article
+            @include articles-iphone-media
+
+    .derecha-iphone
+        article
+            @include articles-iphone-media
+
+    .icono-iphone
+        margin: 0 auto -10px auto
+
+    .intro-precios 
+        height: 160px
+            
+        h2 
+            font-size: 30px
+            padding-bottom: 5px
+
+    .precios
+        margin-top: -47px
+            
+        article 
+            @include size(70%, 240px)
+            display: flex
+            flex-direction: column
+                
+            table
+                margin-top: -30px
+                
+            h4
+                margin: 25px 0 13px 0
+                
+            h2
+                margin-top: -10px
+                font-size: 33px
+                
+            button
+                margin-top: -10px
+                height: 25px
+    
+    .footer
+        height: 150px
+        margin-top: 30px
+            
+        p
+            font-size: 17px
+            width: 80%
+    
+    .menu-footer
+        height: 55px
+        p
+            @include footer
+        
+        ul 
+            li 
+                a 
+                    @include footer
