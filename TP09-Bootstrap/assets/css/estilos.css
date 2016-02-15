@@ -1,0 +1,17 @@
+.jumbotron {
+    padding-top: 90px;
+}
+
+.noticia {
+    margin-bottom: 40px;
+}
+
+.noticia p {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.noticia h4 {
+    padding-left: 8px;
+    padding-bottom: 10px;
+}
