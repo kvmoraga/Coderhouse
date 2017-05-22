@@ -490,7 +490,7 @@ width: 100%;
     .menu-footer ul {
         margin-right: 20px;
     }
-    
+}       
 /*------Media queries móvil------*/
     
 @media screen and (max-width: 420px){
@@ -643,3 +643,4 @@ width: 100%;
         letter-spacing: 1px;
         width: auto;
     }
+}    
